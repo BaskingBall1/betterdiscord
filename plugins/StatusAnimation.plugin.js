@@ -9,6 +9,9 @@ const settings = {
   options: ["option1", "option2", "option3"],
 };
 module.exports = class StatusAnimation {
+  constructor() {
+    this.statusTimer;
+  }
   start() {
     const CustomStatusModule = BdApi.findModuleByProps("CustomStatusSetting");
     this.statusTimer = setTimeout(() => {
